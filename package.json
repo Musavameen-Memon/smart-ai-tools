@@ -1,0 +1,25 @@
+{
+  "name": "ai-tool-backend",
+  "version": "1.0.0",
+  "description": "Full-stack AI cover letter generator powered by Express and Google Gemini",
+  "main": "api/server.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./tailwind.input.css -o ./public/tailwind.css --minify",
+    "prestart": "npm run build:css",
+    "start": "node api/server.js",
+    "dev": "npm run build:css && node --watch api/server.js",
+    "test": "node --test"
+  },
+  "keywords": ["ai", "cover-letter", "express", "gemini"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "tailwindcss": "^4.3.3"
+  }
+}
